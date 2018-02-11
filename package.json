@@ -46,7 +46,7 @@
     "uuid": "^3.1.0",
     "wasm-loader": "^1.1.0",
     "webpack-css-loaders": "^1.0.0",
-    "jq-web": "git://github.com/a-omsk/jq-web.git#new-wasm-gluecode"
+    "jq-web": "git://github.com/fiatjaf/jq-web.git"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
