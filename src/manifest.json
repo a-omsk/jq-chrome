@@ -1,0 +1,39 @@
+{
+  "manifest_version": 2,
+  "name": "jq Chrome",
+  "short_name": "jq JSON processor as Chrome extension",
+  "version": "0.0.1",
+  "description": "jq JSON processor as Chrome extension",
+  "browser_action": {
+    "default_title": "Show the list of pinned tabs",
+    "default_popup": "pages/popup.html"
+  },
+  "author": "Artur Shelashskiy",
+  "background": {
+    "page": "pages/background.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["pages/index.js"],
+      "run_at": "document_end",
+      "exclude_matches": ["https://www.youtube.com/*"]
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "http://*/*",
+    "https://*/*",
+    "storage",
+    "alarms"
+  ],
+  "minimum_chrome_version": "62",
+  "icons": {
+    "16": "assets/jq.png",
+    "48": "assets/jq.png",
+    "128": "assets/jq.png"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+
+}
