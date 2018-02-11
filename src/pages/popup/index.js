@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {Store} from 'react-chrome-redux';
 import App from './App';
+import 'semantic-ui-css/semantic.min.css';
 
 
 const store = new Store({
